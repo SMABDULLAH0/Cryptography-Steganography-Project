@@ -97,9 +97,5 @@ http://127.0.0.1:5000
 
 ## Notes
 
-This README covers every aspect of your project, ensuring anyone can understand, install, and use it. Let me know if there’s anything you’d like to adjust or add!
+This README covers every aspect of this project, ensuring anyone can understand, install, and use it. Let me know if there’s anything you’d like to adjust or add!
 
-
-=======
-# Cryptography-Steganography-Project
-This project combines cryptographic encryption and steganographic embedding techniques to securely transmit sensitive information. 
