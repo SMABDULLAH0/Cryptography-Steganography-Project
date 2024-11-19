@@ -73,17 +73,12 @@ http://127.0.0.1:5000
 - project_directory/
 - │
 - ├── app.py                 # Flask application logic
-- ├── static/                # Static assets (CSS, JavaScript)
-- │   ├── styles.css         # Custom styles
-- │   └── particles.js       # Particle.js script for dynamic background
 - ├── templates/             # HTML templates
 - │   ├── index.html         # Home page
 - │   ├── encrypt.html       # Encryption page
 - │   ├── decrypt.html       # Decryption page
-- ├── utils/                 # Utility functions
-- │   ├── crypto.py          # Encryption and decryption logic
-- │   └── stego.py           # Image processing logic
-- ├── requirements.txt       # Python dependencies
+- ├──outputs/                # Encrypted images
+- ├──uploads/                # Plain images
 - └── README.md              # Project documentation
 
 ## Contributors:
