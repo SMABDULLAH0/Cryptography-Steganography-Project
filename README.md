@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # Enhanced Privacy in Data Transmission Using Steganography and Cryptography
 
 This project integrates cryptography and steganography techniques to securely transmit sensitive information. Users can encrypt messages using a strong encryption algorithm and embed them within images for secure transmission. The system also supports decrypting and extracting messages from images using the decryption key.
@@ -105,4 +103,3 @@ This README covers every aspect of your project, ensuring anyone can understand,
 =======
 # Cryptography-Steganography-Project
 This project combines cryptographic encryption and steganographic embedding techniques to securely transmit sensitive information. 
->>>>>>> dc54495331de7232dfa85b75b054e5c445ef2b4a
