@@ -1,0 +1,15 @@
+# Ignore Python bytecode
+__pycache__/
+*.pyc
+
+# Ignore uploaded files (optional)
+uploads/
+
+# Ignore output directory (optional)
+output/
+
+# Ignore logs
+*.log
+
+# Ignore system files
+.DS_Store

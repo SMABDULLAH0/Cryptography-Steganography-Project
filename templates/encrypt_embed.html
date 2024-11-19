@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypt and Embed</title>
+    <!-- Include Particles.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <style>
+        /* General Styling */
+        body {
+            background-color: #ffffff; /* White background */
+            color: white;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Header Styling */
+        h1 {
+            background-color: rgb(0, 96, 128); /* Dark teal header */
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+
+        /* Form Container */
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Form and Input Styling */
+        form {
+            background-color: #ffffff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            color: black;
+            width: 100%;
+            max-width: 500px;
+            position: relative;
+            z-index: 2;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin: 10px 0 5px;
+            text-align: left;
+        }
+
+        input[type="text"], input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: rgb(0, 96, 128);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: rgb(100, 0, 7); /* Dark red on hover */
+        }
+
+        /* Navigation Links */
+        .navigation {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 300px;
+        }
+
+        .navigation a {
+            background-color: rgb(0, 96, 128);
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 0 10px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .navigation a:hover {
+            background-color: rgb(100, 0, 7);
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: rgb(0, 96, 128);
+            color: white;
+            padding: 15px 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .footer-names {
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        /* Particle Container */
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1; /* Keep particles behind content */
+        }
+    </style>
+</head>
+<body>
+    <!-- Particles.js Background -->
+    <div id="particles-js"></div>
+
+    <!-- Header -->
+    <h1>Encrypt and Embed a Message</h1>
+
+    <!-- Form Container -->
+    <div class="form-container">
+        <form method="POST" enctype="multipart/form-data">
+            <label for="message">Message:</label>
+            <input type="text" id="message" name="message" required>
+
+            <label for="key">Encryption Key (32 characters):</label>
+            <input type="text" id="key" name="key" required>
+
+            <label for="image">Image:</label>
+            <input type="file" id="image" name="image" required>
+
+            <label for="output_filename">Output Filename:</label>
+            <input type="text" id="output_filename" name="output_filename">
+
+            <button type="submit">Encrypt and Embed</button>
+        </form>
+
+        <!-- Navigation Links -->
+        <div class="navigation">
+            <a href="/">Go to Home</a>
+            <a href="/decrypt_extract">Go to Decrypt</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-names">
+            <span>SM Abdullah</span> | 
+            <span>Mohid Munir</span> | 
+            <span>Moiz Sajjad</span> | 
+            <span>Abdullah Ifthikar</span>
+        </div>
+    </footer>
+
+    <!-- Initialize Particles.js -->
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 100,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#ff0000"  // Set particle color to blue
+                },
+                shape: {
+                    type: "circle",
+                },
+                opacity: {
+                    value: 0.5,
+                    anim: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    anim: {
+                        enable: true,
+                        speed: 20,
+                        size_min: 0.1
+                    }
+                },
+                move: {
+                    enable: true,
+                    speed: 6,
+                    direction: "none",
+                    random: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            links: {
+        enable: true, // Enables the links between particles
+        distance: 150, // The distance at which the links will appear
+        color: "#ff0000", // Red color for the edges between particles
+        opacity: 1, // Transparency of the links
+        width: 1 // Width of the links
+    },
+            retina_detect: true
+        });
+    </script>
+</body>
+</html>
