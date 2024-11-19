@@ -35,8 +35,8 @@ Follow these steps to set up and run the project locally:
 
 1. **Clone the Repository**:
    ```bash
-   git clone <repository_url>
-   cd <project_directory>
+   git clone <https://github.com/SMABDULLAH0/Cryptography-Steganography-Project.git>
+   
 ## 2. Set up Virtual Environment
 ```bash
 python -m venv venv
